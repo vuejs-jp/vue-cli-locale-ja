@@ -1,0 +1,21 @@
+{
+  "name": "vue-cli-locale-ja",
+  "description": "Japanese localization for @vue/cli",
+  "version": "0.1.0",
+  "author": "Vue.js Japan User Group",
+  "bugs": {
+    "url": "https://github.com/vuejs-jp/vue-cli-locale-ja/issues"
+  },
+  "homepage": "https://github.com/vuejs-jp/vue-cli-locale-ja#readme",
+  "keywords": [
+    "locale",
+    "vue-cli",
+    "vuejs"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs-jp/vue-cli-locale-ja.git"
+  },
+  "unpkg": "./locales/ja.json"
+}
