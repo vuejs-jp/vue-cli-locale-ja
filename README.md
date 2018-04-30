@@ -1,4 +1,4 @@
-# :ja: vue-cli-locale-ja
+# :jp: vue-cli-locale-ja
 
 Japanese localization for @vue/cli
 
