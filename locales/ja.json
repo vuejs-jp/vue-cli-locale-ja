@@ -1,5 +1,35 @@
 {
   "components": {
+    "file-diff": {
+      "binary": "Binary file not shown",
+      "actions": {
+        "open": "Open in editor"
+      }
+    },
+    "file-diff-view": {
+      "files-changed": "Files changed",
+      "search-file": "Search file",
+      "empty": "No change found",
+      "modals": {
+        "commit": {
+          "title": "Commit changes",
+          "input": "Enter a commit message",
+          "subtitle": "Record changes to the repository",
+          "actions": {
+            "commit": "Commit",
+            "cancel": "Cancel"
+          }
+        }
+      },
+      "actions": {
+        "collapse-all": "Collapse all",
+        "expand-all": "Expand all",
+        "commit": "Commit changes",
+        "skip": "Skip",
+        "continue": "Continue",
+        "refresh": "Refresh"
+      }
+    },
     "folder-explorer": {
       "toolbar": {
         "tooltips": {
@@ -32,11 +62,16 @@
       "tooltips": {
         "plugins": "プラグイン",
         "configuration": "設定",
-        "tasks": "タスク"
+        "tasks": "タスク",
+        "more": "More"
       }
     },
     "project-select-list": {
-      "empty": "プロジェクトが存在しません"
+      "empty": "プロジェクトが存在しません",
+      "titles": {
+        "favorite": "Favorite projects",
+        "other": "Other projects"
+      }
     },
     "project-select-list-item": {
       "tooltips": {
@@ -48,7 +83,13 @@
       "version": "バージョン",
       "latest": "最新",
       "official": "公式",
-      "installed": "インストール済み"
+      "installed": "インストール済み",
+      "actions": {
+        "update": "Update {target}"
+      }
+    },
+    "prompt-list": {
+      "default": "Default"
     },
     "prompts-list": {
       "empty": "No configuration"
@@ -64,6 +105,22 @@
       "log": {
         "tooltip": "ログ<br><i>Vue CLI のログをトグルするにはクリック</i>",
         "empty": "まだログはありません"
+      },
+      "report-bug": "Report bug"
+    },
+    "terminal-view": {
+      "buttons": {
+        "clear": "Clear console",
+        "scroll": "Scroll to bottom"
+      }
+    },
+    "view-badge": {
+      "labels": {
+        "tasks": {
+          "error": "Error status",
+          "running": "Running status",
+          "done": "Done status"
+        }
       }
     }
   },
@@ -79,7 +136,19 @@
       "done": "プロジェクトを作成しました",
       "plugin-install": "{arg0} をインストール中...",
       "plugin-uninstall": "{arg0} をアンインストール中...",
-      "plugin-invoke": "{arg0} を起動中..."
+      "plugin-invoke": "{arg0} を起動中...",
+      "plugin-update": "Updating {arg0}..."
+    }
+  },
+  "types": {
+    "task": {
+      "status": {
+        "idle": "Idle",
+        "running": "Running",
+        "done": "Done",
+        "error": "Error",
+        "terminated": "Terminated"
+      }
     }
   },
   "views": {
@@ -199,6 +268,9 @@
             "cancel": "キャンセル",
             "finish": "インストールを終了する"
           }
+        },
+        "diff": {
+          "label": "Files changed"
         }
       },
       "modal": {
@@ -214,8 +286,112 @@
     "project-configurations": {
       "title": "プロジェクト設定"
     },
+    "project-configuration-details": {
+      "actions": {
+        "cancel": "Cancel changes",
+        "save": "Save changes",
+        "more-info": "More info"
+      }
+    },
     "project-tasks": {
       "title": "プロジェクトタスク"
+    },
+    "project-task-details": {
+      "actions": {
+        "play": "Run task",
+        "stop": "Stop task",
+        "close": "Close"
+      },
+      "command": "Script command",
+      "parameters": "Parameters",
+      "more-info": "More Info",
+      "output": "Output"
+    },
+    "about": {
+      "title": "About",
+      "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> is a built-in package of vue-cli which opens a full-blown UI.",
+      "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
+      "links": "Useful links",
+      "back": "Go back"
+    }
+  },
+  "vue-webpack": {
+    "dashboard": {
+      "title": "Dashboard",
+      "open-app": "Open app",
+      "webpack-status": {
+        "Success": "Success",
+        "Failed": "Failed",
+        "Compiling": "Compiling",
+        "Invalidated": "Invalidated",
+        "Idle": "Idle"
+      },
+      "build-status": {
+        "labels": {
+          "status": "Status",
+          "errors": "Errors",
+          "warnings": "Warnings",
+          "assets": "Assets",
+          "modules": "Modules",
+          "deps": "Dependencies"
+        }
+      },
+      "speed-stats": {
+        "title": "Speed stats"
+      },
+      "module-list": {
+        "title": "Dependencies"
+      },
+      "asset-list": {
+        "title": "Assets",
+        "size-warning": "This asset is big, consider using Code splitting to create smaller assets."
+      }
+    },
+    "analyzer": {
+      "title": "Analyzer",
+      "go-up": "Go up",
+      "go-home": "Go to home",
+      "chunk": "Chunk"
+    },
+    "sizes": {
+      "stats": "Stats",
+      "parsed": "Parsed",
+      "gzip": "Gzip",
+      "help": "<b>Stats:</b> size from webpack stats data.<br><b>Parsed:</b> size from extracted source (after minification plugins). More accurate.<br><b>Gzip:</b> size of gzipped extracted source."
+    },
+    "tasks": {
+      "serve": {
+        "description": "Compiles and hot-reloads for development"
+      },
+      "build": {
+        "description": "Compiles and minifies for production"
+      }
+    }
+  },
+  "eslint": {
+    "config": {
+      "eslint": {
+        "description": "Error checking & Code quality",
+        "groups": {
+          "strongly-recommended": "Strongly recommended",
+          "recommended": "Recommended"
+        }
+      },
+      "eslint-extra": {
+        "description": "Extra ESLint settings"
+      }
+    },
+    "tasks": {
+      "lint": {
+        "description": "Lints and fixes files"
+      }
+    }
+  },
+  "pwa": {
+    "config": {
+      "pwa": {
+        "description": "Progressive Web App"
+      }
     }
   }
 }
