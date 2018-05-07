@@ -1,5 +1,35 @@
 {
   "components": {
+    "file-diff": {
+      "binary": "バイナリファイルを表示しない",
+      "actions": {
+        "open": "エディタで開く"
+      }
+    },
+    "file-diff-view": {
+      "files-changed": "変更されたファイル",
+      "search-file": "ファイルを検索",
+      "empty": "変更はありません",
+      "modals": {
+        "commit": {
+          "title": "コミット変更",
+          "input": "コミットメッセージを入力する",
+          "subtitle": "変更をレポジトリに記録する",
+          "actions": {
+            "commit": "コミット",
+            "cancel": "キャンセル"
+          }
+        }
+      },
+      "actions": {
+        "collapse-all": "全て折りたたむ",
+        "expand-all": "全て展開する",
+        "commit": "コミット変更",
+        "skip": "スキップ",
+        "continue": "続ける",
+        "refresh": "更新する"
+      }
+    },
     "folder-explorer": {
       "toolbar": {
         "tooltips": {
@@ -32,11 +62,16 @@
       "tooltips": {
         "plugins": "プラグイン",
         "configuration": "設定",
-        "tasks": "タスク"
+        "tasks": "タスク",
+        "more": "More"
       }
     },
     "project-select-list": {
-      "empty": "プロジェクトが存在しません"
+      "empty": "プロジェクトが存在しません",
+      "titles": {
+        "favorite": "お気に入りのプロジェクト",
+        "other": "他のプロジェクト"
+      }
     },
     "project-select-list-item": {
       "tooltips": {
@@ -48,10 +83,16 @@
       "version": "バージョン",
       "latest": "最新",
       "official": "公式",
-      "installed": "インストール済み"
+      "installed": "インストール済み",
+      "actions": {
+        "update": "{target} を更新する"
+      }
+    },
+    "prompt-list": {
+      "default": "デフォルト"
     },
     "prompts-list": {
-      "empty": "No configuration"
+      "empty": "設定なし"
     },
     "status-bar": {
       "project": {
@@ -64,6 +105,22 @@
       "log": {
         "tooltip": "ログ<br><i>Vue CLI のログをトグルするにはクリック</i>",
         "empty": "まだログはありません"
+      },
+      "report-bug": "バグをレポートする"
+    },
+    "terminal-view": {
+      "buttons": {
+        "clear": "コンソールをクリア",
+        "scroll": "最下部にスクロール"
+      }
+    },
+    "view-badge": {
+      "labels": {
+        "tasks": {
+          "error": "エラーステータス",
+          "running": "実行ステータス",
+          "done": "完了ステータス"
+        }
       }
     }
   },
@@ -79,7 +136,19 @@
       "done": "プロジェクトを作成しました",
       "plugin-install": "{arg0} をインストール中...",
       "plugin-uninstall": "{arg0} をアンインストール中...",
-      "plugin-invoke": "{arg0} を起動中..."
+      "plugin-invoke": "{arg0} を起動中...",
+      "plugin-update": "{arg0} を更新中..."
+    }
+  },
+  "types": {
+    "task": {
+      "status": {
+        "idle": "アイドル",
+        "running": "実行中",
+        "done": "完了",
+        "error": "エラー",
+        "terminated": "終了"
+      }
     }
   },
   "views": {
@@ -199,6 +268,9 @@
             "cancel": "キャンセル",
             "finish": "インストールを終了する"
           }
+        },
+        "diff": {
+          "label": "変更されたファイル"
         }
       },
       "modal": {
@@ -214,8 +286,112 @@
     "project-configurations": {
       "title": "プロジェクト設定"
     },
+    "project-configuration-details": {
+      "actions": {
+        "cancel": "変更のキャンセル",
+        "save": "変更を保存",
+        "more-info": "詳細情報"
+      }
+    },
     "project-tasks": {
       "title": "プロジェクトタスク"
+    },
+    "project-task-details": {
+      "actions": {
+        "play": "タスクの実行",
+        "stop": "タスクの停止",
+        "close": "閉じる"
+      },
+      "command": "スクリプトコマンド",
+      "parameters": "パラメータ",
+      "more-info": "詳細情報",
+      "output": "出力"
+    },
+    "about": {
+      "title": "Vue CLI について",
+      "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> は本格的な UI で開始する Vue CLI のビルドインパッケージです。",
+      "quote": "Vue CLI 3.x は多くの新しい素晴らしい機能が搭載された完全に書き換えられたものです。ルーティング、Vuex、TypeScript などの機能を選択し、\"Vue CLI プラグイン\"と呼ばれる組み立てブロックを追加してアップグレードできます。しかし、これほど多くのオプションを持つことの意味は、ツールがより複雑で使用開始が難しいです。そのため、本格的な GUI があることは、Vue CLI プラグインを検索して、インストールして、そしてターミナルインターフェースに制限されず、より多くの可能性を広げることができます。要約すると、Vue CLI は新しいプロジェクトを簡単にブートストラップするだけでなく、その後も継続的な作業にも役立ちます！",
+      "links": "役立つリンク",
+      "back": "元に戻る"
+    }
+  },
+  "vue-webpack": {
+    "dashboard": {
+      "title": "ダッシュボード",
+      "open-app": "アプリを開く",
+      "webpack-status": {
+        "Success": "成功",
+        "Failed": "失敗",
+        "Compiling": "コンパイル中",
+        "Invalidated": "無効化",
+        "Idle": "アイドル"
+      },
+      "build-status": {
+        "labels": {
+          "status": "ステータス",
+          "errors": "エラー",
+          "warnings": "警告",
+          "assets": "アセット",
+          "modules": "モジュール",
+          "deps": "依存関係"
+        }
+      },
+      "speed-stats": {
+        "title": "速度統計"
+      },
+      "module-list": {
+        "title": "依存関係"
+      },
+      "asset-list": {
+        "title": "アセット",
+        "size-warning": "このアセットは大きく、コード分割を使用して小さなアセットを作成することを検討してください。"
+      }
+    },
+    "analyzer": {
+      "title": "アナライザ",
+      "go-up": "上がる",
+      "go-home": "ホームに戻る",
+      "chunk": "チャンク"
+    },
+    "sizes": {
+      "stats": "統計",
+      "parsed": "解析済み",
+      "gzip": "Gzip",
+      "help": "<b>統計:</b> webpack 統計データからのサイズ。<br><b>解析済み:</b> 抽出されたソースのサイズ (縮小プラグイン後)。より正確です。<br><b>Gzip:</b> gzip された抽出されたソースのサイズ。"
+    },
+    "tasks": {
+      "serve": {
+        "description": "コンパイルと開発向けのホットリロード"
+      },
+      "build": {
+        "description": "コンパイルとプロダクション向けのミニファイ"
+      }
+    }
+  },
+  "eslint": {
+    "config": {
+      "eslint": {
+        "description": "エラーチェックとコード品質",
+        "groups": {
+          "strongly-recommended": "強く推奨",
+          "recommended": "推奨"
+        }
+      },
+      "eslint-extra": {
+        "description": "さらなる ESLint の設定"
+      }
+    },
+    "tasks": {
+      "lint": {
+        "description": "リントと修正ファイル"
+      }
+    }
+  },
+  "pwa": {
+    "config": {
+      "pwa": {
+        "description": "プログレッシブ Web アプリ"
+      }
     }
   }
 }
