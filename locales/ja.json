@@ -1,33 +1,33 @@
 {
   "components": {
     "file-diff": {
-      "binary": "Binary file not shown",
+      "binary": "バイナリファイルを表示しない",
       "actions": {
-        "open": "Open in editor"
+        "open": "エディタで開く"
       }
     },
     "file-diff-view": {
-      "files-changed": "Files changed",
-      "search-file": "Search file",
-      "empty": "No change found",
+      "files-changed": "変更されたファイル",
+      "search-file": "ファイルを検索",
+      "empty": "変更はありません",
       "modals": {
         "commit": {
-          "title": "Commit changes",
-          "input": "Enter a commit message",
-          "subtitle": "Record changes to the repository",
+          "title": "コミット変更",
+          "input": "コミットメッセージを入力する",
+          "subtitle": "変更をレポジトリに記録する",
           "actions": {
-            "commit": "Commit",
-            "cancel": "Cancel"
+            "commit": "コミット",
+            "cancel": "キャンセル"
           }
         }
       },
       "actions": {
-        "collapse-all": "Collapse all",
-        "expand-all": "Expand all",
-        "commit": "Commit changes",
-        "skip": "Skip",
-        "continue": "Continue",
-        "refresh": "Refresh"
+        "collapse-all": "全て折りたたむ",
+        "expand-all": "全て展開する",
+        "commit": "コミット変更",
+        "skip": "スキップ",
+        "continue": "続ける",
+        "refresh": "更新する"
       }
     },
     "folder-explorer": {
@@ -69,8 +69,8 @@
     "project-select-list": {
       "empty": "プロジェクトが存在しません",
       "titles": {
-        "favorite": "Favorite projects",
-        "other": "Other projects"
+        "favorite": "お気に入りのプロジェクト",
+        "other": "他のプロジェクト"
       }
     },
     "project-select-list-item": {
@@ -85,14 +85,14 @@
       "official": "公式",
       "installed": "インストール済み",
       "actions": {
-        "update": "Update {target}"
+        "update": "{target} を更新する"
       }
     },
     "prompt-list": {
-      "default": "Default"
+      "default": "デフォルト"
     },
     "prompts-list": {
-      "empty": "No configuration"
+      "empty": "設定なし"
     },
     "status-bar": {
       "project": {
@@ -106,20 +106,20 @@
         "tooltip": "ログ<br><i>Vue CLI のログをトグルするにはクリック</i>",
         "empty": "まだログはありません"
       },
-      "report-bug": "Report bug"
+      "report-bug": "バグをレポートする"
     },
     "terminal-view": {
       "buttons": {
-        "clear": "Clear console",
-        "scroll": "Scroll to bottom"
+        "clear": "コンソールをクリア",
+        "scroll": "最下部にスクロール"
       }
     },
     "view-badge": {
       "labels": {
         "tasks": {
-          "error": "Error status",
-          "running": "Running status",
-          "done": "Done status"
+          "error": "エラーステータス",
+          "running": "実行ステータス",
+          "done": "完了ステータス"
         }
       }
     }
@@ -137,17 +137,17 @@
       "plugin-install": "{arg0} をインストール中...",
       "plugin-uninstall": "{arg0} をアンインストール中...",
       "plugin-invoke": "{arg0} を起動中...",
-      "plugin-update": "Updating {arg0}..."
+      "plugin-update": "{arg0} を更新中..."
     }
   },
   "types": {
     "task": {
       "status": {
-        "idle": "Idle",
-        "running": "Running",
-        "done": "Done",
-        "error": "Error",
-        "terminated": "Terminated"
+        "idle": "アイドル",
+        "running": "実行中",
+        "done": "完了",
+        "error": "エラー",
+        "terminated": "終了"
       }
     }
   },
@@ -270,7 +270,7 @@
           }
         },
         "diff": {
-          "label": "Files changed"
+          "label": "変更されたファイル"
         }
       },
       "modal": {
@@ -288,9 +288,9 @@
     },
     "project-configuration-details": {
       "actions": {
-        "cancel": "Cancel changes",
-        "save": "Save changes",
-        "more-info": "More info"
+        "cancel": "変更のキャンセル",
+        "save": "変更を保存",
+        "more-info": "詳細情報"
       }
     },
     "project-tasks": {
@@ -298,99 +298,99 @@
     },
     "project-task-details": {
       "actions": {
-        "play": "Run task",
-        "stop": "Stop task",
-        "close": "Close"
+        "play": "タスクの実行",
+        "stop": "タスクの停止",
+        "close": "閉じる"
       },
-      "command": "Script command",
-      "parameters": "Parameters",
-      "more-info": "More Info",
-      "output": "Output"
+      "command": "スクリプトコマンド",
+      "parameters": "パラメータ",
+      "more-info": "詳細情報",
+      "output": "出力"
     },
     "about": {
-      "title": "About",
-      "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> is a built-in package of vue-cli which opens a full-blown UI.",
-      "quote": "Vue-cli 3.x is a complete rewrite, with a lot of new awesome features. You will be to select features like routing, Vuex or Typescript, then add and upgrade building blocks called \"vue-cli plugins\". But having so much more options also means the tool is now more complex and harder to start using. That's why we thought having a full-blown GUI would help discover the new features, search and install vue-cli plugins and unlock more possibilities overall while not being limited by a terminal interface. To sum up, vue-cli will not only allow you to bootstrap a new project easily, but it will also remain useful for ongoing work afterwards!",
-      "links": "Useful links",
-      "back": "Go back"
+      "title": "Vue CLI について",
+      "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> は本格的な UI で開始する Vue CLI のビルドインパッケージです。",
+      "quote": "Vue CLI 3.x は多くの新しい素晴らしい機能が搭載された完全に書き換えられたものです。ルーティング、Vuex、TypeScript などの機能を選択し、\"Vue CLI プラグイン\"と呼ばれる組み立てブロックを追加してアップグレードできます。しかし、これほど多くのオプションを持つことの意味は、ツールがより複雑で使用開始が難しいです。そのため、本格的な GUI があることは、Vue CLI プラグインを検索して、インストールして、そしてターミナルインターフェースに制限されず、より多くの可能性を広げることができます。要約すると、Vue CLI は新しいプロジェクトを簡単にブートストラップするだけでなく、その後も継続的な作業にも役立ちます！",
+      "links": "役立つリンク",
+      "back": "元に戻る"
     }
   },
   "vue-webpack": {
     "dashboard": {
-      "title": "Dashboard",
-      "open-app": "Open app",
+      "title": "ダッシュボード",
+      "open-app": "アプリを開く",
       "webpack-status": {
-        "Success": "Success",
-        "Failed": "Failed",
-        "Compiling": "Compiling",
-        "Invalidated": "Invalidated",
-        "Idle": "Idle"
+        "Success": "成功",
+        "Failed": "失敗",
+        "Compiling": "コンパイル中",
+        "Invalidated": "無効化",
+        "Idle": "アイドル"
       },
       "build-status": {
         "labels": {
-          "status": "Status",
-          "errors": "Errors",
-          "warnings": "Warnings",
-          "assets": "Assets",
-          "modules": "Modules",
-          "deps": "Dependencies"
+          "status": "ステータス",
+          "errors": "エラー",
+          "warnings": "警告",
+          "assets": "アセット",
+          "modules": "モジュール",
+          "deps": "依存関係"
         }
       },
       "speed-stats": {
-        "title": "Speed stats"
+        "title": "速度統計"
       },
       "module-list": {
-        "title": "Dependencies"
+        "title": "依存関係"
       },
       "asset-list": {
-        "title": "Assets",
-        "size-warning": "This asset is big, consider using Code splitting to create smaller assets."
+        "title": "アセット",
+        "size-warning": "このアセットは大きく、コード分割を使用して小さなアセットを作成することを検討してください。"
       }
     },
     "analyzer": {
-      "title": "Analyzer",
-      "go-up": "Go up",
-      "go-home": "Go to home",
-      "chunk": "Chunk"
+      "title": "アナライザ",
+      "go-up": "上がる",
+      "go-home": "ホームに戻る",
+      "chunk": "チャンク"
     },
     "sizes": {
-      "stats": "Stats",
-      "parsed": "Parsed",
+      "stats": "統計",
+      "parsed": "解析済み",
       "gzip": "Gzip",
-      "help": "<b>Stats:</b> size from webpack stats data.<br><b>Parsed:</b> size from extracted source (after minification plugins). More accurate.<br><b>Gzip:</b> size of gzipped extracted source."
+      "help": "<b>統計:</b> webpack 統計データからのサイズ。<br><b>解析済み:</b> 抽出されたソースのサイズ (縮小プラグイン後)。より正確です。<br><b>Gzip:</b> gzip された抽出されたソースのサイズ。"
     },
     "tasks": {
       "serve": {
-        "description": "Compiles and hot-reloads for development"
+        "description": "コンパイルと開発向けのホットリロード"
       },
       "build": {
-        "description": "Compiles and minifies for production"
+        "description": "コンパイルとプロダクション向けのミニファイ"
       }
     }
   },
   "eslint": {
     "config": {
       "eslint": {
-        "description": "Error checking & Code quality",
+        "description": "エラーチェックとコード品質",
         "groups": {
-          "strongly-recommended": "Strongly recommended",
-          "recommended": "Recommended"
+          "strongly-recommended": "強く推奨",
+          "recommended": "推奨"
         }
       },
       "eslint-extra": {
-        "description": "Extra ESLint settings"
+        "description": "さらなる ESLint の設定"
       }
     },
     "tasks": {
       "lint": {
-        "description": "Lints and fixes files"
+        "description": "リントと修正ファイル"
       }
     }
   },
   "pwa": {
     "config": {
       "pwa": {
-        "description": "Progressive Web App"
+        "description": "プログレッシブ Web アプリ"
       }
     }
   }
