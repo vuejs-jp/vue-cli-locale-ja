@@ -6,7 +6,7 @@ This will be automatically loaded by vue-cli.
 
 ## :muscle: Contribution
 
-### Work Step Example
+### :globe_with_meridians: Workflow
 - Fork the repository from [vuejs-jp/vue-cli-locale-ja](https://github.com/vuejs-jp/vue-cli-locale-ja)
 - Create your topic branch from `dev`: `git branch my-translation origin/dev`
 - Commit your changes: `git commit -am 'Translate some topics'`
