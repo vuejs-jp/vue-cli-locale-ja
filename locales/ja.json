@@ -153,7 +153,8 @@
       "plugin-install": "{arg0} をインストール中...",
       "plugin-uninstall": "{arg0} をアンインストール中...",
       "plugin-invoke": "{arg0} を起動中...",
-      "plugin-update": "{arg0} を更新中..."
+      "plugin-update": "{arg0} を更新中...",
+      "plugins-update": "{arg0} プラグインを更新中..."
     }
   },
   "types": {
