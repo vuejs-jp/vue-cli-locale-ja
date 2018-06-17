@@ -80,7 +80,7 @@
     "project-select-list-item": {
       "tooltips": {
         "favorite": "お気に入りをトグル",
-        "delete": "削除する"
+        "delete": "リストから削除"
       }
     },
     "project-plugin-item": {
