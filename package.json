@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-locale-ja",
   "description": "Japanese localization for @vue/cli",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Vue.js Japan User Group",
   "bugs": {
     "url": "https://github.com/vuejs-jp/vue-cli-locale-ja/issues"
