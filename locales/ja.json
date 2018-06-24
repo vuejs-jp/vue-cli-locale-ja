@@ -234,7 +234,7 @@
           },
           "manual": {
             "name": "手動",
-            "description": "手動的に機能を選択する"
+            "description": "手動で機能を選択する"
           },
           "remote": {
             "name": "リモートプリセット",
@@ -403,7 +403,7 @@
     },
     "analyzer": {
       "title": "アナライザ",
-      "go-up": "上がる",
+      "go-up": "上位に戻る",
       "go-home": "ホームに戻る",
       "chunk": "チャンク"
     },
@@ -456,7 +456,7 @@
         },
         "baseUrl": {
           "label": "ベース URL",
-          "description": "アプリケーションが配置されるベース URL、例えば '/my-app'。空文字 ('') を使用すると全てのアセットが相対パスで解決されます。"
+          "description": "アプリケーションが配置されるベース URL、例えば '/my-app'。空文字 (\"\") を使用すると全てのアセットが相対パスで解決されます。"
         },
         "outputDir": {
           "label": "出力ディレクトリ",
@@ -464,11 +464,11 @@
         },
         "assetsDir": {
           "label": "アセットディレクトリ",
-          "description": "生成される静的アセット (JavaScript、CSS、画像、フォント) の下、保持するディレクトリ。"
+          "description": "生成される静的アセット (JavaScript、CSS、画像、フォント) の配下に保持するディレクトリ。"
         },
         "runtimeCompiler": {
           "label": "ランタイムコンパイラを有効にする",
-          "description": "これは Vue コンポーネントでテンプレートオプションを使用することができますが、アプリケーションに 10kb のペイロードが追加されます。"
+          "description": "これは Vue コンポーネントでテンプレートオプションを使用することができますが、アプリケーションに 10 KB のペイロードが追加されます。"
         },
         "productionSourceMap": {
           "label": "プロダクションソースマップを有効にする",
@@ -495,7 +495,7 @@
       }
     },
     "suggestions": {
-      "vue-config-open": "Vue 設定を開く"
+      "vue-config-open": "Vue の設定を開く"
     }
   },
   "eslint": {
@@ -562,7 +562,7 @@
     },
     "suggestions": {
       "open-vue": {
-        "label": "Vue 設定を開く"
+        "label": "Vue の設定を開く"
       },
       "open-manifest": {
         "label": "マニフェストを開く"
@@ -582,7 +582,7 @@
   "nightwatch": {
     "tasks": {
       "test": {
-        "description": "nightwatch で e2e テストを実行する",
+        "description": "Nightwatch で e2e テストを実行する",
         "url": "開発サーバを自動起動する代わりに、指定した URL に対して e2e テストを実行する"
       }
     }
