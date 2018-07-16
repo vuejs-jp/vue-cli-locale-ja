@@ -96,8 +96,8 @@
         },
         "project-tasks-dropdown": {
           "tooltips": {
-            "tasks": "Tasks",
-            "running-tasks": "{count} running task(s)"
+            "tasks": "タスク",
+            "running-tasks": "{count} タスク動作中"
           }
         },
         "prompt-list": {
