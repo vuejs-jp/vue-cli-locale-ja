@@ -94,6 +94,12 @@
             "update": "{target} を更新する"
           }
         },
+        "project-tasks-dropdown": {
+          "tooltips": {
+            "tasks": "Tasks",
+            "running-tasks": "{count} running task(s)"
+          }
+        },
         "prompt-list": {
           "default": "デフォルト"
         },
