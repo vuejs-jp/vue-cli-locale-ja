@@ -586,8 +586,8 @@
           "test": {
             "description": "Nightwatch で e2e テストを実行する",
             "url": "開発サーバを自動起動する代わりに、指定した URL に対して e2e テストを実行する",
-            "config": "Use custom nightwatch config file (overrides internals)",
-            "env": "Comma-delimited browser envs to run in"
+            "config": "カスタム Nightwatch 設定ファイルを使用する (内部で上書き)",
+            "env": "カンマで区切られたブラウザenv環境変数に付け加える"
           }
         }
       },
