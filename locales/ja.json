@@ -16,6 +16,7 @@
           "files-changed": "変更されたファイル",
           "search-file": "ファイルを検索",
           "empty": "変更はありません",
+          "error": "ファイル変更を検出できませんでした",
           "modals": {
             "commit": {
               "title": "コミット変更",
@@ -46,7 +47,18 @@
               "refresh": "リフレッシュ"
             },
             "placeholder": "フォルダへのフルパスを入力する",
-            "empty": "まだお気に入りフォルダがありません。"
+            "empty": "まだお気に入りフォルダがありません。",
+            "show-hidden": "非表示フォルダを表示"
+          },
+          "new-folder": {
+            "action": "新しいフォルダ",
+            "title": "新しいフォルダを作成する",
+            "field": {
+              "title": "新しいフォルダ",
+              "subtitle": "フォルダのセパレータを使用すると、一度に複数のネストされたフォルダを作成できます。"
+            },
+            "cancel": "キャンセル",
+            "create": "作成"
           }
         },
         "list-item-info": {
@@ -68,6 +80,7 @@
           "tooltips": {
             "plugins": "プラグイン",
             "configuration": "設定",
+            "dependencies": "依存",
             "tasks": "タスク",
             "more": "More"
           }
@@ -82,7 +95,8 @@
         "project-select-list-item": {
           "tooltips": {
             "favorite": "お気に入りをトグル",
-            "delete": "リストから削除"
+            "delete": "リストから削除",
+            "open-in-editor": "エディタで開く"
           }
         },
         "project-plugin-item": {
@@ -92,6 +106,16 @@
           "installed": "インストール済み",
           "actions": {
             "update": "{target} を更新する"
+          }
+        },
+        "project-dependency-item": {
+          "version": "バージョン",
+          "wanted": "手配",
+          "latest": "最新",
+          "installed": "インストール済み",
+          "actions": {
+            "update": "{target} を更新",
+            "uninstall": "{target} をアンインストール"
           }
         },
         "project-tasks-dropdown": {
@@ -120,7 +144,8 @@
           },
           "report-bug": "バグをレポートする",
           "translate": "翻訳をヘルプする",
-          "dark-mode": "ダークモードにトグル"
+          "dark-mode": "ダークモードにトグル",
+          "reset-plugin-api": "プラグイン API をリフレッシュ"
         },
         "suggestion-bar": {
           "suggestion": "提案",
@@ -136,7 +161,10 @@
           }
         },
         "top-bar": {
-          "no-favorites": "お気に入りプロジェクトなし"
+          "no-favorites": "お気に入りプロジェクトなし",
+          "favorite-projects": "お気に入りのプロジェクト",
+          "recent-projects": "最近のプロジェクト",
+          "homepage": "ホームページ"
         },
         "view-badge": {
           "labels": {
@@ -162,7 +190,11 @@
           "plugin-uninstall": "{arg0} をアンインストール中...",
           "plugin-invoke": "{arg0} を起動中...",
           "plugin-update": "{arg0} を更新中...",
-          "plugins-update": "{arg0} プラグインを更新中..."
+          "plugins-update": "{arg0} プラグインを更新中...",
+          "dependency-install": "{arg0} をインストール中...",
+          "dependency-uninstall": "{arg0} をアンインストール中...",
+          "dependency-update": "{arg0} を更新中...",
+          "dependencies-update": "{arg0} パッケージを更新中..."
         }
       },
       "types": {
@@ -187,6 +219,13 @@
           "buttons": {
             "create": "ここに新しいプロジェクトを作成する",
             "import": "このフォルダをインポートする"
+          },
+          "import": {
+            "no-modules": {
+              "title": "不明モジュール",
+              "message": "プロジェクトは 'node_modules' フォルダがないようです。どうか、インポートする前に依存がインストール済みか確認してください。",
+              "close": "了解"
+            }
           }
         },
         "project-create": {
@@ -200,7 +239,8 @@
                   "placeholder": "my-app",
                   "tooltip": "ベースフォルダを変更する",
                   "action": "このフォルダを選択する",
-                  "folder-exists": "このフォルダは既に存在する"
+                  "folder-exists": "このフォルダは既に存在する",
+                  "folder-name-invalid": "フォルダ名が不正"
                 },
                 "manager": {
                   "label": "パッケージマネージャ",
@@ -246,7 +286,15 @@
               },
               "remote": {
                 "name": "リモートプリセット",
-                "description": "git リポジトリからプリセットをフェッチ"
+                "description": "git リポジトリからプリセットをフェッチ",
+                "url": {
+                  "title": "プリセット URL",
+                  "subtitle": "Git レポジトリ、例えば 'username/repo'。'gitlab:' まはた 'bitbucket:' でプリフィックスもできます。"
+                },
+                "options": "他のオプション",
+                "clone": "Cloner/Private レポジトリ",
+                "cancel": "キャンセル",
+                "done": "完了"
               },
               "default-preset": "デフォルトプリセット"
             },
@@ -301,7 +349,8 @@
               "not-found": "結果が見つかりません",
               "buttons": {
                 "cancel": "キャンセル",
-                "install": "{target} をインストール"
+                "install": "{target} をインストール",
+                "default-install": "インストール"
               }
             },
             "configuration": {
@@ -351,6 +400,26 @@
           "parameters-info": "パラメータはタスクが起動される時に保存されます",
           "more-info": "詳細情報",
           "output": "出力"
+        },
+        "project-dependencies": {
+          "title": "プロジェクト依存",
+          "heading": {
+            "dependencies": "メイン依存",
+            "devDependencies": "開発依存"
+          },
+          "actions": {
+            "install": "インストール依存",
+            "update-all": "全ての依存を更新"
+          },
+          "install": {
+            "title": "新しい依存をインストール"
+          },
+          "uninstall": {
+            "title": "アンインストールの確認",
+            "body": "{id} をアンインストールしてもよろしいですか？",
+            "cancel": "キャンセル",
+            "uninstall": "{id} をアンインストール"
+          }
         },
         "about": {
           "title": "Vue CLI について",
