@@ -585,7 +585,9 @@
         "tasks": {
           "test": {
             "description": "Nightwatch で e2e テストを実行する",
-            "url": "開発サーバを自動起動する代わりに、指定した URL に対して e2e テストを実行する"
+            "url": "開発サーバを自動起動する代わりに、指定した URL に対して e2e テストを実行する",
+            "config": "Use custom nightwatch config file (overrides internals)",
+            "env": "Comma-delimited browser envs to run in"
           }
         }
       },
