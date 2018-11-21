@@ -1,6 +1,11 @@
-# :jp: vue-cli-locale-ja
+# :jp: vue-cli-locale-ja - DEPRECATED
 
 Japanese localization for @vue/cli
+
+### :warning: Please note, this project is deprecated
+
+Vue CLI Japanese localization was not used this repository.
+See the [Vue CLI docs](https://cli.vuejs.org/dev-guide/ui-localization.html#translate-the-standard-ui)
 
 This will be automatically loaded by vue-cli.
 
